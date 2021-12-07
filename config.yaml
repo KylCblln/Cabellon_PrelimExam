@@ -1,0 +1,12 @@
+---
+- hosts: all
+  roles:
+    - python
+    - java
+    - role: change_motd
+      vars:
+        motd: "Ansible Managed node by qkacabellon"
+    - role: create_user
+      vars:
+        username: "qkacabellon1210"
+        name: "Kyle Cabellon" 
